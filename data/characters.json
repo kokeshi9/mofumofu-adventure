@@ -1,0 +1,37 @@
+[
+  {
+    "id": "pomu",
+    "type": "friend",
+    "name": "ぽむたろう",
+    "line": "ボクもいっしょに行くよ！",
+    "image": "assets/characters/pomu.png"
+  },
+  {
+    "id": "moko",
+    "type": "friend",
+    "name": "もこたん",
+    "line": "えへへ…よろしくね♪",
+    "image": "assets/characters/moko.png"
+  },
+  {
+    "id": "shiro",
+    "type": "friend",
+    "name": "しろまる",
+    "line": "静かだけど、がんばるよ。",
+    "image": "assets/characters/shiro.png"
+  },
+  {
+    "id": "koro",
+    "type": "friend",
+    "name": "ころりん",
+    "line": "おやつ分けてくれたら全力出す～！",
+    "image": "assets/characters/koro.png"
+  },
+  {
+    "id": "fuwari",
+    "type": "friend",
+    "name": "ふわり",
+    "line": "ふわっと守ってあげるね…！",
+    "image": "assets/characters/fuwari.png"
+  }
+]

@@ -1,0 +1,91 @@
+[
+  {
+    "label": "宝",
+    "type": "treasure",
+    "message": "宝箱を見つけた！アイテムを手に入れた！",
+    "weight": 3,
+    "effect": { "items": 1 }
+  },
+  {
+    "label": "大宝",
+    "type": "bigTreasure",
+    "message": "大きな宝箱！たくさんのアイテムを手に入れた！",
+    "weight": 1,
+    "effect": { "items": 2 }
+  },
+  {
+    "label": "休",
+    "type": "rest",
+    "message": "休憩してHPが回復した！",
+    "weight": 2,
+    "effect": { "hp": 1 }
+  },
+  {
+    "label": "罠",
+    "type": "trap",
+    "message": "罠にかかってしまった…！",
+    "weight": 2,
+    "effect": { "hp": -1 }
+  },
+  {
+    "label": "仲間",
+    "type": "friend",
+    "message": "新しい仲間が加わった！",
+    "weight": 2
+  },
+  {
+    "label": "敵",
+    "type": "enemy",
+    "message": "敵が現れた！",
+    "weight": 3,
+    "winRateBase": 0.55,
+    "reward": { "items": 1 },
+    "damage": 1
+  },
+  {
+    "label": "強敵",
+    "type": "strongEnemy",
+    "message": "強敵が現れた…！",
+    "weight": 1,
+    "winRateBase": 0.40,
+    "reward": { "items": 2 },
+    "damage": 2
+  },
+  {
+    "label": "ボス",
+    "type": "boss",
+    "message": "ボスが立ちはだかった！",
+    "weight": 0.1,
+    "winRateBase": 0.33,
+    "reward": { "items": 3 },
+    "damage": 3
+  },
+  {
+    "label": "祠",
+    "type": "shrine",
+    "message": "不思議な祠に出会った…",
+    "weight": 0.5,
+    "shrinePool": [
+      { "grant": { "hp": 1 } },
+      { "grant": { "items": 2 } },
+      {
+        "grantAbility": {
+          "code": "temp_battle_boost",
+          "label": "戦闘巧者",
+          "uses": 2,
+          "trigger": "pre_battle",
+          "modifier": { "win_rate_bonus": 0.1 }
+        }
+      }
+    ]
+  },
+  {
+    "label": "虹宝",
+    "type": "rainbowChest",
+    "message": "虹色の宝箱！",
+    "weight": 0.2,
+    "effect": { "items": 3 },
+    "bonusChance": 0.25,
+    "bonusEffect": { "items": 1 }
+  }
+]

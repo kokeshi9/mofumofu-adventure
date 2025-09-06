@@ -1,0 +1,121 @@
+/* ===== ベース ===== */
+body {
+  font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+  background-color: #fff8f0;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 { color: #d080b0; }
+
+/* マップ表示 */
+#map {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.node {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  border-radius: 8px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.node.active { background-color: #f9a; color: #fff; }
+
+/* ステータス表示 */
+#status { font-weight: bold; margin-bottom: 10px; }
+#status .blink { animation: blink 0.6s ease; }
+#status .hp-hit { background: #ffebe9; border-radius: 4px; padding: 0 6px; }
+#status .hp-heal { background: #e7f7ee; border-radius: 4px; padding: 0 6px; }
+@keyframes blink { from { opacity: .5; } to { opacity: 1; } }
+
+/* 仲間一覧バッジ */
+#allies { 
+  margin: 10px auto 0; 
+  max-width: 560px; 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 6px; 
+  justify-content: center; 
+}
+.allies .ally-badge { 
+  background: #fff; 
+  border: 1px solid #f3b; 
+  border-radius: 999px; 
+  padding: 4px 10px; 
+  font-size: 13px; 
+}
+
+/* ログエリア */
+#log {
+  background-color: #fff0f5;
+  border: 1px solid #f8c;
+  padding: 10px;
+  margin: 10px auto;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 6px;
+  min-height: 100px;
+  white-space: pre-wrap;
+  text-align: left;
+}
+#log-history {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+  max-height: 200px;
+  overflow-y: auto;
+  border-top: 1px dashed #ccc;
+  padding-top: 5px;
+}
+
+/* ボタン */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #d080b0;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+button:disabled { background-color: #ccc; cursor: not-allowed; }
+#retryButton { margin-top: 10px; display: none; }
+
+/* ===== ボス戦演出用 ===== */
+.boss-event {
+  color: #ff4d4d;
+  font-weight: bold;
+  font-size: 1.4em;
+  text-shadow: 0 0 8px #ff8080, 0 0 15px #ff3333;
+  animation: bossTextGlow 1.5s ease-in-out infinite alternate;
+}
+@keyframes bossTextGlow {
+  from { text-shadow: 0 0 8px #ff8080, 0 0 15px #ff3333; }
+  to   { text-shadow: 0 0 15px #ffcccc, 0 0 25px #ff6666; }
+}
+
+.boss-flash {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(255, 0, 0, 0.3);
+  animation: bossFlashAnim 0.5s ease-in-out 3;
+  pointer-events: none;
+  z-index: 999;
+}
+@keyframes bossFlashAnim {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
